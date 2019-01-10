@@ -2,7 +2,7 @@ package com.nikhilgupta.springframework.services;
 
 import java.util.Set;
 
-public class CrudService<T,ID> {
+public interface CrudService<T,ID> {
     T findById(ID id);
 
     T save(T object);
