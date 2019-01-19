@@ -1,14 +1,14 @@
 package com.nikhilgupta.springframework.services.map;
 
 import com.nikhilgupta.springframework.models.Owner;
-import com.nikhilgupta.springframework.services.CrudService;
+import com.nikhilgupta.springframework.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     @Override
     public Owner findById(Long id) {
-        return super.findAll();
+        return (Owner) super.findAll();
     }
 
     @Override
@@ -29,5 +29,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements C
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
