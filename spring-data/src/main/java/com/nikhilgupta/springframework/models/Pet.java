@@ -2,8 +2,7 @@ package com.nikhilgupta.springframework.models;
 
 import java.time.LocalDate;
 
-public class Pet {
-    private Long id;
+public class Pet extends BaseEntity{
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
@@ -32,11 +31,4 @@ public class Pet {
         this.birthDate = birthDate;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 }
